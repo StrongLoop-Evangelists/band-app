@@ -34,5 +34,9 @@
   "Role": {
     "dataSource": "db",
     "public": false
+  },
+  "album": {
+    "dataSource": "db",
+    "public": true
   }
 }
