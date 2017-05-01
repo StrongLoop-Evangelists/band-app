@@ -1,0 +1,48 @@
+{
+  "name": "event",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "date": {
+      "type": "date"
+    },
+    "location": {
+      "type": "string",
+      "default": "TBD"
+    },
+    "cost": {
+      "type": "number"
+    },
+    "poster": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string",
+      "default": "age-restriction"
+    },
+    "age-restriction": {
+      "type": "string"
+    },
+    "lineup": {
+      "type": [
+        "string"
+      ]
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
