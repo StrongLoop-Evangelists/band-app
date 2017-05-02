@@ -1,0 +1,4 @@
+---
+applications:
+ - name: band-app
+   memory: 256M
