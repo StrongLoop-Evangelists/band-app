@@ -1,5 +1,4 @@
 ---
 applications:
  - name: band-app
-   random-route: true
    memory: 256M
