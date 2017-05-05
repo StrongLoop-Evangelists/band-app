@@ -1,4 +1,5 @@
----
 applications:
- - name: band-app
-   memory: 256M
+- name: Band-App
+  memory: 256M
+  services:
+  - bandapp-cloudantdb
