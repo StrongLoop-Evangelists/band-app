@@ -19,7 +19,7 @@ else {
 };
 
 console.log('VCAP: ', VCAP);
-console.log('NODE_ENV: ', NODE_ENV);
+console.log('NODE_ENV: ', process.env.NODE_ENV);
 
 // Export our data-sources for convenience
 let DATASOURCES = {
