@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Band App</title>
+  </head>
+  <body>
+    <div class="js-info"></div>
+    <div class="js-events"></div>
+
+    <script>
+      // BAND INFO
+      fetch('https://band-app.mybluemix.net/api/bands/829f5215a7864a332e12db14fbd40a2e')
+      .then(res => res.json())
+      .then(res => {
+        let tmpl = `
+          <img src="${res.image}"" style="float:right; margin:50px 0; width:100%;">
+          <h1>${res.name}</h1>
+          <div>
+            ${res.description}
+          </div>
+        `;
+
+        tmpl += res.socialMedia.reduce((str, channel) => {
+          return str + `<p><a href="${channel.url}">${channel.name}</a></p>`;
+        }, '');
+
+        document.getElementsByClassName('js-info')[0].innerHTML = tmpl;
+      });
+
+      // EVENTS
+      fetch('https://band-app.mybluemix.net/api/events')
+      .then(res => res.json())
+      .then(res => {
+        tmpl = '<h2>Events</h2><ul>';
+
+        tmpl += res.reduce((str, event) => {
+          return str + `<li>${event.description}</li>`;
+        }, '');
+
+        tmpl += '</ul>';
+
+        document.getElementsByClassName('js-events')[0].innerHTML = tmpl;
+      });
+    </script>
+  </body>
+</html>
+
