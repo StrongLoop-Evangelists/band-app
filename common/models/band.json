@@ -1,0 +1,31 @@
+{
+  "name": "band",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "type": "string",
+      "default": "''"
+    },
+    "description": {
+      "type": "string",
+      "default": "''"
+    },
+    "socialMedia": {
+      "type": [
+        "object"
+      ]
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

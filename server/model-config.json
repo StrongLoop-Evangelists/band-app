@@ -38,5 +38,9 @@
   "event": {
     "dataSource": "db",
     "public": true
+  },
+  "band": {
+    "dataSource": "db",
+    "public": true
   }
 }
